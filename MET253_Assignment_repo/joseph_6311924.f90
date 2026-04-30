@@ -1,15 +1,14 @@
-PROGRAM student grades
+PROGRAM student_grades
 IMPLICIT NONE 
 INTEGER,DIMENSION :: scores
 INTEGER :: i
 CHARACTER(len=1) ::grade
-scores=(/85,62,45,91,38,74,88,61,47)
-PRINT*,"                                            " 
+scores=(/85,62,45,91,38,74,88,61,47/)
+PRINT*,"
 PRINT*," KUMASI SECONDARY SCHOOL-MATHEMATICS CLASS "
-PRINT*," END OF SEMESTER REPORT
-PRINT*,"                                             "
-PRINT*," STUDENT NUMBER. SCORE GRADE " 
-
+PRINT*," END OF SEMESTER REPORT"
+PRINT*,"
+PRINT*," STUDENT NUMBER SCORE GRADE " 
 DO i=1,10
 IF (scores(i)>= 80) THEN,
 grade ='A'
@@ -23,12 +22,12 @@ ELSE IF (score(i)>=40) THEN,
 grade = 'E'
 ELSE 
 grade = 'F'
-WRITE(*,'(I11,I10,A8)')I, SCORES(I), GRADE 
+WRITE(*,'(I11,I10,A8)') i, scores(i), grade 
 END DO 
-PRINT*,""
-PRINT*,"                                                "
-PRINT*,"End of Report"
-PRINT*,"                                                "
-END PROGRAM student grades
-END PROGRAM
+PRINT*,"
+PRINT*," End of Report"
+PRINT*,"
+END PROGRAM student_grades
+
 !okang joseph boye
+!6311924
